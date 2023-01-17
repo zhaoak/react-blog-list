@@ -12,7 +12,9 @@ export default function useBlogs() {
       // set state
       setPosts(response);
     };
+    // call the function that we wrote?? indirectly???
     fetchData();
   }, []);
+  // return state
   return posts;
 }

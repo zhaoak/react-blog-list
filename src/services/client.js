@@ -11,6 +11,7 @@ export function checkError({ data, error }) {
   return data;
 }
 
+// supabase fetch
 export async function getBlogs() {
   const response = await client.from('blogs').select('*').limit(100);
   return checkError(response);

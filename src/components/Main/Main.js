@@ -8,9 +8,9 @@ import useBlogs from '../../hooks/useBlogs.js';
 export default function Main() {
   // using hook, fetch and store data from supabase
   const posts = useBlogs();
-  console.log(posts);
+  // map all posts to individual BlogCard components, render all of them to the page
   return (
-    <div className="honk">
+    <section>
       {posts.map((post) => (
         <BlogCard
           key={post.id}
@@ -21,6 +21,6 @@ export default function Main() {
         />
       ))}
       ;
-    </div>
+    </section>
   );
 }
